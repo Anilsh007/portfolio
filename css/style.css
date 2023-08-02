@@ -110,6 +110,7 @@ figure figcaption {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  height: 100vh  !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -260,14 +261,14 @@ figure figcaption {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  background-color: #002323;
+  background-color: #011616;
   color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
   #colorlib-main {
     width: 100%;
-    padding: 0 1em;
+    /* padding: 0 1em; */
   }
 }
 
@@ -285,8 +286,9 @@ figure figcaption {
 }
 
 #colorlib-hero .flexslider .slides {
-  position: relative;
-  overflow: visible;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
 #colorlib-hero .flexslider .slides li {
@@ -303,6 +305,7 @@ figure figcaption {
   left: 20px;
   float: left;
   width: auto;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -336,7 +339,7 @@ figure figcaption {
   display: none;
 }
 
-#colorlib-hero .flexslider .slider-text {
+/* #colorlib-hero .flexslider .slider-text {
   display: table;
   opacity: 0;
   min-height: 500px;
@@ -349,9 +352,9 @@ figure figcaption {
   min-height: 700px;
   padding: 2.5em;
   position: relative;
-}
+} */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #colorlib-hero .flexslider .slider-text>.slider-text-inner {
     text-align: center;
   }
@@ -361,14 +364,29 @@ figure figcaption {
 #colorlib-hero .flexslider .slider-text>.slider-text-inner h2 {
   margin: 0;
   padding: 0;
-}
+}*/
 
 #colorlib-hero .flexslider .slider-text>.slider-text-inner h1 {
   margin-bottom: 20px;
-  font-size: 60px;
   line-height: 1.3;
   font-weight: 700;
 }
+
+.banner {
+  display: flex;
+  align-items: center;
+  padding: 6rem;
+}
+
+.img-section{
+  width: 40%;
+  position: relative;
+  margin: auto;
+}
+/* 
+.flexslider .slides img{
+  width: inherit;
+} */
 
 @media screen and (max-width: 768px) {
   #colorlib-hero .flexslider .slider-text>.slider-text-inner h1 {
@@ -419,14 +437,15 @@ figure figcaption {
 }
 
 #colorlib-hero .flexslider .slider-text>.slider-text-inner .btn.btn-learn {
-  color: #000;
-  border: 1px solid #000;
+  color: #d2b916;
+  border: 1px solid #d2b916;
   background: transparent !important;
 }
 
 #colorlib-hero .flexslider .slider-text>.slider-text-inner .btn.btn-learn:hover {
-  background: transparent !important;
-  border: 1px solid #000 !important;
+  background: #d2b916 !important;
+  border: 1px solid #d2b916 !important;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
@@ -489,7 +508,14 @@ body.offcanvas .colorlib-nav-toggle {
   clear: both;
   width: 100%;
   display: block;
-  box-shadow: 0px 40px 30px -20px #000;
+}
+
+.colorlib-about,.colorlib-skills,.colorlib-experience{
+  background-color: #002323;
+}
+
+.colorlib-contact{
+  background-color: #011010;
 }
 
 @media screen and (max-width: 768px) {
@@ -502,8 +528,7 @@ body.offcanvas .colorlib-nav-toggle {
   .colorlib-about,
   .colorlib-services,
   .colorlib-contact {
-    padding-top: 5em;
-    padding-bottom: 8em;
+    padding: 3em;
   }
 }
 
@@ -749,7 +774,7 @@ body.offcanvas .colorlib-nav-toggle {
   height: 0;
   border-style: solid;
   border-width: 9px 9px 9px 0;
-  border-color: transparent #023737  transparent transparent;
+  border-color: transparent #023737 transparent transparent;
   left: 0;
   top: 10px;
   margin-left: -9px;
@@ -792,12 +817,13 @@ body.offcanvas .colorlib-nav-toggle {
 .services {
   margin-bottom: 30px;
   padding: 1.5em;
-  -webkit-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  -moz-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  -ms-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  -o-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0px 0px 6px 2px rgb(0 0 0);
+  -moz-box-shadow: 0px 0px 6px 2px rgb(0 0 0);
+  -ms-box-shadow: 0px 0px 6px 2px rgb(0 0 0);
+  -o-box-shadow: 0px 0px 6px 2px rgb(0 0 0);
+  box-shadow: 0px 0px 6px 2px rgb(0 0 0);
   border-bottom: 2px solid #2c98f0;
+  text-align: center;
 }
 
 .services .icon2 {
@@ -1281,13 +1307,14 @@ body.offcanvas .colorlib-nav-toggle {
 .work-img {
   transform: scale(1.0);
   transition: 500ms linear;
-  border: 2px solid rgba(0,0,0,0);
+  border: 2px solid rgba(0, 0, 0, 0);
   opacity: 0.6;
   width: 280px;
-  box-shadow: 0 0 8px 2px rgba(0,0,0,.85);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .85);
 }
 
-.work-img:hover, .work-img:hover+p {
+.work-img:hover,
+.work-img:hover+p {
   transform: scale(1.1);
   transition: 500ms linear all;
   opacity: 1;
@@ -1299,17 +1326,17 @@ body.offcanvas .colorlib-nav-toggle {
   justify-content: space-around;
 }
 
-.work-box{
+.work-box {
   margin-bottom: 5rem;
   overflow: hidden;
-  box-shadow: 0 0 8px 2px rgba(0,0,0,.85);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .85);
 }
 
-.work-box a{
+.work-box a {
   position: relative;
 }
 
-.work-box p{
+.work-box p {
   position: absolute;
   background-color: #000000c7;
   width: 98%;
@@ -1752,11 +1779,11 @@ body.offcanvas .colorlib-nav-toggle {
   *display: inline;
   width: 30px;
   height: 2px;
-  color: #000;
+  color: #ffdd00;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #000;
+  background: #ffdd00;
   -webkit-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
@@ -1767,7 +1794,7 @@ body.offcanvas .colorlib-nav-toggle {
   content: '';
   width: 30px;
   height: 2px;
-  background: #000;
+  background: #ffdd00 !important;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
@@ -1777,8 +1804,8 @@ body.offcanvas .colorlib-nav-toggle {
 
 .colorlib-nav-toggle.dark i {
   position: relative;
-  color: #000;
-  background: #000;
+  color: #ffdd00;
+  background: #ffdd00;
   -webkit-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
@@ -1786,7 +1813,7 @@ body.offcanvas .colorlib-nav-toggle {
 
 .colorlib-nav-toggle.dark i::before,
 .colorlib-nav-toggle.dark i::after {
-  background: #000;
+  background: #ffdd00;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;

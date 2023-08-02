@@ -105,9 +105,11 @@
 			if ($('body').hasClass('offcanvas')) {
 				$this.removeClass('active');
 				$('body').removeClass('offcanvas');
+				$this.css({"left":"-5px"})
 			} else {
 				$this.addClass('active');
 				$('body').addClass('offcanvas');
+				$this.css({"left":"-65px"});
 			}
 		});
 
