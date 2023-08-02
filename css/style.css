@@ -110,7 +110,7 @@ figure figcaption {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  height: 100vh  !important;
+  height: 100vh !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -144,7 +144,7 @@ figure figcaption {
 }
 
 #colorlib-aside .position span {
-  color: #ffdd00;
+  color: #d2b916;
 }
 
 #colorlib-aside #colorlib-logo {
@@ -212,7 +212,7 @@ figure figcaption {
   bottom: 7px;
   left: 0;
   right: 0;
-  background-color: #ffdd00;
+  background-color: #d2b916;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -241,7 +241,7 @@ figure figcaption {
 }
 
 #colorlib-aside #colorlib-main-menu ul li.active a {
-  color: #ffdd00;
+  color: #d2b916;
 }
 
 #colorlib-aside #colorlib-main-menu ul li.active a:after {
@@ -378,11 +378,12 @@ figure figcaption {
   padding: 6rem;
 }
 
-.img-section{
+.img-section {
   width: 40%;
   position: relative;
   margin: auto;
 }
+
 /* 
 .flexslider .slides img{
   width: inherit;
@@ -510,11 +511,13 @@ body.offcanvas .colorlib-nav-toggle {
   display: block;
 }
 
-.colorlib-about,.colorlib-skills,.colorlib-experience{
+.colorlib-about,
+.colorlib-skills,
+.colorlib-experience {
   background-color: #002323;
 }
 
-.colorlib-contact{
+.colorlib-contact {
   background-color: #011010;
 }
 
@@ -547,7 +550,7 @@ body.offcanvas .colorlib-nav-toggle {
   letter-spacing: 5px;
   line-height: 1.8;
   position: relative;
-  color: #ffdd00;
+  color: #d2b916;
 }
 
 .colorlib-heading span {
@@ -1133,7 +1136,7 @@ body.offcanvas .colorlib-nav-toggle {
   text-align: left;
   width: 100%;
   float: left;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   position: relative;
 }
 
@@ -1141,11 +1144,11 @@ body.offcanvas .colorlib-nav-toggle {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
   display: table;
   text-align: center;
-  background: #f2f3f7;
+  /* background: #f2f3f7; */
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -1191,7 +1194,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .colorlib-feature.colorlib-feature-sm .colorlib-icon i {
-  color: #2c98f0;
+  color: #d2b916;
   font-size: 40px;
 }
 
@@ -1779,11 +1782,11 @@ body.offcanvas .colorlib-nav-toggle {
   *display: inline;
   width: 30px;
   height: 2px;
-  color: #ffdd00;
+  color: #d2b916;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #ffdd00;
+  background: #d2b916;
   -webkit-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
@@ -1794,7 +1797,7 @@ body.offcanvas .colorlib-nav-toggle {
   content: '';
   width: 30px;
   height: 2px;
-  background: #ffdd00 !important;
+  background: #d2b916 !important;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
@@ -1804,8 +1807,8 @@ body.offcanvas .colorlib-nav-toggle {
 
 .colorlib-nav-toggle.dark i {
   position: relative;
-  color: #ffdd00;
-  background: #ffdd00;
+  color: #d2b916;
+  background: #d2b916;
   -webkit-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
   transition: all .2s ease-out;
@@ -1813,7 +1816,7 @@ body.offcanvas .colorlib-nav-toggle {
 
 .colorlib-nav-toggle.dark i::before,
 .colorlib-nav-toggle.dark i::after {
-  background: #ffdd00;
+  background: #d2b916;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -1925,4 +1928,27 @@ body.offcanvas .colorlib-nav-toggle {
 
 .js .animate-box {
   opacity: 0;
+}
+
+/* contact */
+
+.form-control {
+  border: 2px solid #000000;
+  background-color: #00000000;
+}
+
+.form-control:active,
+.form-control:focus {
+  border-color: #000;
+  background: #d2b91666;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.btn-send-message{
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  border: 2px solid rgb(210, 185, 22);
+  padding: 1em !important;
+  font-size: 15px;
 }
