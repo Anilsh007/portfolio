@@ -326,30 +326,6 @@ $(document).ready(function () {
 	});
 
 
-	$("#contactForm").submit(function (e) {
-		e.preventDefault();
-		// Client-side validation (you can add more checks here)
-		// Check if fields are not empty
-		if ($("#name").val() === "" || $("#email").val() === "" || $("#subject").val() === "" || $("#message").val() === "") {
-			alert("Please fill in all fields.");
-			return;
-		}
-		// If all fields are valid, submit the form using AJAX
-		$.ajax({
-			url: "mail.php",
-			type: "POST",
-			data: $(this).serialize(),
-			success: function (response) {
-				alert(response); // Display server response
-				$("#contactForm")[0].reset(); // Reset the form after successful submission
-			},
-			error: function (xhr, status, error) {
-				alert("Error: " + xhr.responseText);
-			}
-		});
-	});
-
-
 	// JavaScript to set the WhatsApp link with a dynamic message
 	document.getElementById("whatsappLink").addEventListener("click", function () {
 		var phoneNumber = "7415435889"; // Replace with the recipient's phone number
