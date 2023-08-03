@@ -348,4 +348,13 @@ $(document).ready(function () {
 			}
 		});
 	});
+
+
+	// JavaScript to set the WhatsApp link with a dynamic message
+	document.getElementById("whatsappLink").addEventListener("click", function () {
+		var phoneNumber = "7415435889"; // Replace with the recipient's phone number
+		var message = "Hi there, I visited your website and I have a question. Can you help me?";
+		var encodedMessage = encodeURIComponent(message);
+		this.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodedMessage;
+	});
 });
