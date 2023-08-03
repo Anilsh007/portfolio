@@ -105,11 +105,11 @@
 			if ($('body').hasClass('offcanvas')) {
 				$this.removeClass('active');
 				$('body').removeClass('offcanvas');
-				$this.css({"left":"-5px"})
+				$this.css({ "left": "-5px" })
 			} else {
 				$this.addClass('active');
 				$('body').addClass('offcanvas');
-				$this.css({"left":"-65px"});
+				$this.css({ "left": "-65px" });
 			}
 		});
 
@@ -314,7 +314,7 @@
 $(document).ready(function () {
 	$(".tab-box").hide();
 	$("#website").show();
-	
+
 	$(".tab-li").click(function () {
 		$(".tab-box").hide();
 		var tab_name = $(this).attr("tab-name");
@@ -323,5 +323,29 @@ $(document).ready(function () {
 		$(this).addClass("active-li");
 
 		$(`#${tab_name}`).show();
+	});
+
+
+	$("#contactForm").submit(function (e) {
+		e.preventDefault();
+		// Client-side validation (you can add more checks here)
+		// Check if fields are not empty
+		if ($("#name").val() === "" || $("#email").val() === "" || $("#subject").val() === "" || $("#message").val() === "") {
+			alert("Please fill in all fields.");
+			return;
+		}
+		// If all fields are valid, submit the form using AJAX
+		$.ajax({
+			url: "mail.php",
+			type: "POST",
+			data: $(this).serialize(),
+			success: function (response) {
+				alert(response); // Display server response
+				$("#contactForm")[0].reset(); // Reset the form after successful submission
+			},
+			error: function (xhr, status, error) {
+				alert("Error: " + xhr.responseText);
+			}
+		});
 	});
 });
