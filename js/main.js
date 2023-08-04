@@ -99,17 +99,19 @@
 	var burgerMenu = function () {
 
 		$('.js-colorlib-nav-toggle').on('click', function (event) {
-			event.preventDefault();
-			var $this = $(this);
+			//event.preventDefault();
+			//var $this = $(this);
 
 			if ($('body').hasClass('offcanvas')) {
-				$this.removeClass('active');
+				$(this).removeClass('active');
 				$('body').removeClass('offcanvas');
-				$this.css({ "left": "-5px" })
+				$(this).css({ "left": "-5px" })
+				$(this).removeClass("active-sidebar");
 			} else {
-				$this.addClass('active');
+				$(this).addClass('active');
 				$('body').addClass('offcanvas');
-				$this.css({ "left": "-65px" });
+				$(this).css({ "left": "-65px" });
+				$(this).addClass("active-sidebar");
 			}
 		});
 
