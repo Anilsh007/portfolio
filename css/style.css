@@ -275,7 +275,6 @@ figure figcaption {
 }
 
 
-
 #colorlib-main {
   width: calc(100% - 240px);
   float: right;
@@ -413,6 +412,29 @@ figure figcaption {
 @media screen and (max-width: 768px) {
   #colorlib-hero .flexslider .slider-text>.slider-text-inner h1 {
     font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  .banner {
+    display: block;
+  }
+
+  #colorlib-hero .flexslider .slider-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+  }
+
+  .img-section {
+    width: 100%;
+    opacity: 0.2;
+  }
+
+  #colorlib-hero .flexslider .slider-text>.slider-text-inner .btn {
+    width: auto !important;
   }
 }
 
@@ -2033,7 +2055,7 @@ body.offcanvas .colorlib-nav-toggle {
   transition: 0.5s all;
 }
 
-.button-block i:hover{
+.button-block i:hover {
   color: #d2b916;
   transition: 0.5s all;
 }
