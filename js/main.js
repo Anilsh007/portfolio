@@ -151,7 +151,9 @@
 
 		$('#navbar a:not([class="external"])').click(function (event) {
 			var section = $(this).data('nav-section'),
-				navbar = $('#navbar');
+			navbar = $('#navbar');
+
+			$('body').removeClass('offcanvas');
 
 			if ($('[data-section="' + section + '"]').length) {
 				$('html, body').animate({
@@ -167,6 +169,7 @@
 
 			event.preventDefault();
 			return false;
+
 		});
 
 
@@ -293,18 +296,18 @@
 	// Document on load.
 	$(function () {
 		fullHeight();
-		//counter();
-		//counterWayPoint();
+		counter();
+		counterWayPoint();
 		contentWayPoint();
 		burgerMenu();
 
 		clickMenu();
-		// navActive();
+		navActive();
 		navigationSection();
-		// windowScroll();
+		//windowScroll();
 
 
-		mobileMenuOutsideClick();
+		//mobileMenuOutsideClick();
 		sliderMain();
 		//stickyFunction();
 		owlCrouselFeatureSlide();

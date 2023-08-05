@@ -113,6 +113,10 @@ figure figcaption {
   height: 100vh !important;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 768px) {
   #colorlib-aside {
     width: 240px;
@@ -121,7 +125,24 @@ figure figcaption {
     -ms-transform: translateX(-300px);
     -o-transform: translateX(-300px);
     transform: translateX(-300px);
-    padding-top: 4em;
+    /* padding-top: 4em; */
+  }
+
+  #colorlib-aside .author-img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  #colorlib-aside #colorlib-logo {
+    font-size: 22px !important;
+  }
+
+  #colorlib-aside #colorlib-main-menu .collapse {
+    height: auto !important;
+  }
+
+  #colorlib-aside #colorlib-main-menu ul li {
+    margin: 0 0 4px 0 !important;
   }
 }
 
@@ -339,7 +360,7 @@ figure figcaption {
   display: none;
 }
 
-/* #colorlib-hero .flexslider .slider-text {
+#colorlib-hero .flexslider .slider-text {
   display: table;
   opacity: 0;
   min-height: 500px;
@@ -352,9 +373,9 @@ figure figcaption {
   min-height: 700px;
   padding: 2.5em;
   position: relative;
-} */
+}
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #colorlib-hero .flexslider .slider-text>.slider-text-inner {
     text-align: center;
   }
@@ -364,7 +385,7 @@ figure figcaption {
 #colorlib-hero .flexslider .slider-text>.slider-text-inner h2 {
   margin: 0;
   padding: 0;
-}*/
+}
 
 #colorlib-hero .flexslider .slider-text>.slider-text-inner h1 {
   margin-bottom: 20px;
@@ -485,8 +506,8 @@ body.offcanvas .colorlib-nav-toggle {
   padding: 0 2.5em;
 }
 
-.active-sidebar{
-  left: 35px !important;
+.active-sidebar {
+  left: -65px !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -576,13 +597,13 @@ body.offcanvas .colorlib-nav-toggle {
   letter-spacing: 5px;
 }
 
-.about-section{
+.about-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.about-box{
+.about-box {
   width: 160px;
   padding: 20px;
   margin: 0 20px;
@@ -1992,6 +2013,31 @@ body.offcanvas .colorlib-nav-toggle {
   font-size: 40px;
 }
 
+.button-block {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  border-top: 1px solid #d2b916;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.button-block i {
+  font-size: 20px;
+  padding: 13px;
+  display: block;
+  color: white;
+  background-color: #002323;
+  border-radius: 100%;
+  margin: 10px;
+  transition: 0.5s all;
+}
+
+.button-block i:hover{
+  color: #d2b916;
+  transition: 0.5s all;
+}
+
 /* css for EXPERIENCE */
 
 @media screen and (max-width: 480px) {
@@ -1999,24 +2045,24 @@ body.offcanvas .colorlib-nav-toggle {
     display: none;
   }
 
-  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after{
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
     display: none;
   }
 
-  .timeline-centered:before{
+  .timeline-centered:before {
     display: none;
   }
 
-  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label{
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
     margin-left: 0;
   }
 
-  .colorlib-experience .timeline-centered .timeline-entry{
+  .colorlib-experience .timeline-centered .timeline-entry {
     margin-left: 20px;
     margin-bottom: 60px;
   }
 
-  body.offcanvas #colorlib-aside{
+  body.offcanvas #colorlib-aside {
     width: 100vw;
   }
 
