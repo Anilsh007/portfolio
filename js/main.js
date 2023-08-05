@@ -105,12 +105,12 @@
 			if ($('body').hasClass('offcanvas')) {
 				$(this).removeClass('active');
 				$('body').removeClass('offcanvas');
-				$(this).css({ "left": "-5px" })
+				//$(this).css({ "left": "-5px" })
 				$(this).removeClass("active-sidebar");
 			} else {
 				$(this).addClass('active');
 				$('body').addClass('offcanvas');
-				$(this).css({ "left": "-65px" });
+				//$(this).css({ "left": "-65px" });
 				$(this).addClass("active-sidebar");
 			}
 		});
@@ -150,10 +150,18 @@
 	var clickMenu = function () {
 
 		$('#navbar a:not([class="external"])').click(function (event) {
-			var section = $(this).data('nav-section'),
-			navbar = $('#navbar');
 
-			$('body').removeClass('offcanvas');
+			if ($('body').hasClass('offcanvas')) {
+				$('body').removeClass('offcanvas');
+				$(".js-colorlib-nav-toggle").removeClass("active-sidebar");
+			} else {
+				$('body').addClass('offcanvas');
+				$(".js-colorlib-nav-toggle").addClass("active-sidebar");
+			}
+
+
+			var section = $(this).data('nav-section'),
+				navbar = $('#navbar');
 
 			if ($('[data-section="' + section + '"]').length) {
 				$('html, body').animate({
@@ -171,7 +179,6 @@
 			return false;
 
 		});
-
 
 	};
 

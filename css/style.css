@@ -507,7 +507,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .active-sidebar {
-  left: -65px !important;
+  left: -55px !important;
 }
 
 @media screen and (max-width: 768px) {
