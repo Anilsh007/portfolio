@@ -134,14 +134,14 @@
 	    }
 		});
 
-		$(window).scroll(function(){
-			if ( $('body').hasClass('offcanvas') ) {
+		// $(window).scroll(function(){
+		// 	if ( $('body').hasClass('offcanvas') ) {
 
-    			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
+    	// 		$('body').removeClass('offcanvas');
+    	// 		$('.js-colorlib-nav-toggle').removeClass('active');
 			
-	    	}
-		});
+	    // 	}
+		// });
 
 	};
 
