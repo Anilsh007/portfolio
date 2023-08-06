@@ -1883,7 +1883,7 @@ body.offcanvas .colorlib-nav-toggle {
   }
 
   .side-icon{
-    display: block;
+    display: block ;
   }
 
   #colorlib-aside .author-img {
@@ -1971,6 +1971,12 @@ body.offcanvas .colorlib-nav-toggle {
 
   .row-bottom-padded-lg {
     padding-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .side-icon{
+    display: none !important;
   }
 }
 
