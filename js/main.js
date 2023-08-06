@@ -106,10 +106,12 @@
 				$this.removeClass('active');
 				$('body').removeClass('offcanvas');
 				$this.removeClass("active-sidebar");
+				$(".side-icon").show();
 			} else {
 				$this.addClass('active');
 				$('body').addClass('offcanvas');
 				$this.addClass("active-sidebar");	
+				$(".side-icon").hide();
 			}
 		});
 

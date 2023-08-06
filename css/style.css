@@ -1808,8 +1808,23 @@ body.offcanvas .colorlib-nav-toggle {
   transition: 0.5s all;
 }
 
-/* css for EXPERIENCE */
+/* css for side icon */
 
+.side-icon {
+  position: fixed;
+  right: 0;
+  bottom: 9%;
+  display: none;
+}
+
+.side-icon a{
+  background-color: #d2b916;
+  padding: 15.5px 15px;
+  border-radius: 80%;
+  margin: 7px;
+  display: flex;
+  color: black;
+}
 
 /* ======================================================================================= */
 /* ======================================================================================= */
@@ -1829,7 +1844,8 @@ body.offcanvas .colorlib-nav-toggle {
     font-size: 16px;
   }
 
-  #colorlib-aside #colorlib-main-menu ul li,#colorlib-aside .position{
+  #colorlib-aside #colorlib-main-menu ul li,
+  #colorlib-aside .position {
     font-size: 12px;
   }
 
@@ -1838,7 +1854,7 @@ body.offcanvas .colorlib-nav-toggle {
     height: 20.678vh;
   }
 
-  #colorlib-aside #colorlib-logo{
+  #colorlib-aside #colorlib-logo {
     font-size: 1.5em;
   }
 }
@@ -1866,6 +1882,10 @@ body.offcanvas .colorlib-nav-toggle {
     /* padding-top: 4em; */
   }
 
+  .side-icon{
+    display: block;
+  }
+
   #colorlib-aside .author-img {
     width: 110px !important;
     height: 110px !important;
@@ -1879,11 +1899,11 @@ body.offcanvas .colorlib-nav-toggle {
     height: auto !important;
   }
 
-  #colorlib-aside #colorlib-main-menu ul li{
+  #colorlib-aside #colorlib-main-menu ul li {
     margin: 0 0 4px 0 !important;
   }
 
-  #colorlib-aside #colorlib-main-menu ul li a{
+  #colorlib-aside #colorlib-main-menu ul li a {
     padding: 1.5vh 0;
   }
 
